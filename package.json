@@ -3,8 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
+    "material-ui": "^1.0.0-beta.2",
+    "muicss": "^0.9.20",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-skycons": "^0.3.0",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.7.2",
+    "redux-localstorage": "^0.4.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.10"

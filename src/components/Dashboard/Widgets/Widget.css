@@ -1,0 +1,21 @@
+.Widget {
+  background-color: rgba(15, 30, 112, 0.88);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.todayForecast {
+  padding: 10px;
+}
+
+.weatherIcon {
+  margin: 10px;
+}
+
+.forecastText {
+  color: rgb(98, 98, 98);
+}
+
+.miniForecastTxt {
+  font-size: 13px;
+}

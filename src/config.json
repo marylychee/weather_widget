@@ -1,0 +1,28 @@
+{
+  "defaultWidgets": [
+    {
+      "type" : "WEATHER",
+      "data": {
+        "location": "Sydney",
+        "lat": -33.8700308,
+        "lng": 151.2116687
+      }
+    },
+    {
+      "type" : "WEATHER",
+      "data": {
+        "location": "New York",
+        "lat": 40.705311,
+        "lng": 74.2581855
+      }
+    },
+    {
+      "type" : "WEATHER",
+      "data": {
+        "location": "London",
+        "lat": 51.5285582,
+        "lng": -0.2416806
+      }
+    }
+  ]
+}

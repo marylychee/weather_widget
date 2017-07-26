@@ -1,5 +1,15 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+   position: relative;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 100vh;
+   background: rgba(36, 36, 158, 0.83); /* For browsers that do not support gradients */
+   background: -webkit-linear-gradient(left top, rgba(36, 36, 158, 0.83), rgba(13, 1, 6, 0.8)); /* For Safari 5.1 to 6.0 */
+   background: -o-linear-gradient(bottom right, rgba(36, 36, 158, 0.83), rgba(13, 1, 6, 0.8)); /* For Opera 11.1 to 12.0 */
+   background: -moz-linear-gradient(bottom right, rgba(36, 36, 158, 0.83), rgba(13, 1, 6, 0.8)); /* For Firefox 3.6 to 15 */
+   background: linear-gradient(to bottom right, rgba(36, 36, 158, 0.83), rgba(13, 1, 6, 0.8)); /* Standard syntax */
 }

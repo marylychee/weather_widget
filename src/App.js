@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import Dashboard from './components/Dashboard/Dashboard';
 import './App.css';
+import { createStore } from 'redux';
+import {rootReducer} from './reducers';
+
+const store = createStore(rootReducer);
+
+injectTapEventPlugin();
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+    	 <Provider store={store}>
+         <MuiThemeProvider>
+      		<div className="App">
+        	  <Dashboard />
+      		</div>
+        </MuiThemeProvider>
+      	</Provider>
     );
   }
+
 }
 
 export default App;
