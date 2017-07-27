@@ -11,10 +11,10 @@ class WidgetList extends Component {
       default: return null;
   	}
   }
-  
+
   render() {
     return (
-      <div>
+      <div className="widgetList">
        	 {this.props.widgets.map(this.renderWidgets.bind(this))}
       </div>
     );

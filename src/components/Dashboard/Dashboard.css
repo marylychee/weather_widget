@@ -6,8 +6,9 @@
 
 .widgetList {
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
 }
+
 
 #link {
   position: absolute;

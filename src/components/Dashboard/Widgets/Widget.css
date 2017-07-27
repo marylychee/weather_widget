@@ -14,6 +14,7 @@
   padding-bottom: 10px;
 }
 
+
 .weekForecast{
   margin-left: -25px;
   margin-right: -115px;
@@ -26,6 +27,7 @@
 .forecastText {
   color: rgb(98, 98, 98);
 }
+
 .forecastTextSide {
   color: rgb(179, 179, 179);
   line-height: 0.7;
