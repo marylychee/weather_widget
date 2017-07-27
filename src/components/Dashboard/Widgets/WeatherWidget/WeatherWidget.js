@@ -10,9 +10,9 @@ import '../Widget.css';
 
 const style = {
   weatherContainer : {
-    height: 200,
     width: 500,
     margin: 10,
+    padding: 10,
     textAlign: 'center',
     display: 'inline-block',
     rounded: true,
@@ -53,6 +53,10 @@ class WeatherWidget extends Widget {
     return this.weather && Math.round((faren - 32)*5/9).toString().concat("°C");
   }
 
+  percentage(num) {
+    return (num * 100).toString().concat('%')
+  }
+
   get weather () {
     return this.state.weather;
   }
@@ -66,19 +70,33 @@ class WeatherWidget extends Widget {
         <Paper style={style.weatherContainer} zDepth={2} >
           <Container fluid={true}>
             <Row className="todayForecast">
-                <Col md="4"><h3>{geoData.data.location}</h3></Col>
+                <Col md="4">
+                  <h3>{geoData.data.location}</h3>
+                  <p className="forecastTextSide">
+                    Precipitation: {this.weather && this.percentage(this.weather.currently.precipIntensity)}
+                  </p>
+                  <p className="forecastTextSide">
+                    Humidity: {this.weather && this.percentage(this.weather.currently.humidity)}
+                  </p>
+                  <p className="forecastTextSide">
+                    Wind: {this.weather && this.weather.currently.windSpeed}km/hr
+                  </p>
+                  <p></p>
+                </Col>
                 <Col md="4">
                   <div className="weatherIcon">
-                    <Skycons color='rgb(121, 36, 166)' icon={this.weather && this.weather.currently.icon.toUpperCase().replace(/-/g, '_')} autoplay={true}/>
+                    <Skycons color='rgb(255, 220, 69)' icon={this.weather && this.weather.currently.icon.toUpperCase().replace(/-/g, '_')} autoplay={true}/>
                     <p className="forecastText">{this.weather && this.weather.currently.icon.replace(/-/g, ' ')}</p>
                   </div>
                 </Col>
                 <Col md="4">
-                  <h1>
+                  <h1 className="temperatureFontStyle">
                   {this.weather && this.currentTemperature(this.weather.currently.apparentTemperature)}
                 </h1>
                 </Col>
             </Row>
+          </Container>
+          <Container fluid={true}>
             <Row className="weekForecast">
               {this.renderWeeklyForecast}
             </Row>
@@ -90,22 +108,10 @@ class WeatherWidget extends Widget {
 
   get renderWeeklyForecast() {
     return this.weather && this.weather.daily.data.slice(0,5).map((item, index) => (
-      <Col md="2" key={index}>
-        <Row>
-          {}
-        </Row>
-        <Row>
+        <Col md="2" key={index}>
           <Skycons color='rgb(121, 36, 166)' icon={this.weather && item.icon.toUpperCase().replace(/-/g, '_')} autoplay={true}/>
-        </Row>
-        <Row>
-          <Col md="6">
-            <p className="miniForecastTxt">{this.currentTemperature(item.apparentTemperatureMax)}</p>
-            </Col>
-          <Col md="6">
-            <p className="miniForecastTxt">{this.currentTemperature(item.apparentTemperatureMin)}</p>
-          </Col>
-        </Row>
-      </Col>
+          <p className="miniForecastTxt">{this.currentTemperature(item.apparentTemperatureMax).slice(0,-1)} <span className="nightTxt">{this.currentTemperature(item.apparentTemperatureMin).slice(0,-1)}</span></p>
+        </Col>
     ));
   }
 

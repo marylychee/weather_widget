@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 
 class Widget extends Component {
-  
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      position: {
+        
+      }
+    }
+  }
+
   render() {
     return (
       <div>

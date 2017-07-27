@@ -4,10 +4,19 @@
   margin: 10px;
 }
 
-.todayForecast {
-  padding: 10px;
+.alignCenter{
+  margin-left: 20px;
 }
 
+.todayForecast {
+  padding-bottom: 10px;
+}
+
+.weekForecast{
+  margin-left: -25px;
+  margin-right: -115px;
+  clear: none;
+}
 .weatherIcon {
   margin: 10px;
 }
@@ -15,7 +24,24 @@
 .forecastText {
   color: rgb(98, 98, 98);
 }
+.forecastTextSide {
+  color: rgb(179, 179, 179);
+  line-height: 0.7;
+  text-align: left;
+  margin-left: 14px;
+}
 
 .miniForecastTxt {
   font-size: 13px;
+}
+
+.nightTxt {
+  color: rgb(158, 158, 158);
+}
+
+.temperatureFontStyle{
+  vertical-align: text-top;
+  font-size: 53px;
+  padding-top: 15px;
+  color: #ff84ae;
 }

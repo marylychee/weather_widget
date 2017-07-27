@@ -4,7 +4,6 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import './Button.css'
 
 const Button = ({ onClick }) => {
-
   return (
     <FloatingActionButton
       secondary={true}
@@ -12,7 +11,6 @@ const Button = ({ onClick }) => {
       onClick={() => onClick && onClick()}>
       <ContentAdd />
     </FloatingActionButton>
-
   );
 };
 
