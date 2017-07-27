@@ -21,7 +21,7 @@ class Dashboard extends Component {
     return (
       <div className="dashboard">
 				<Button onClick={()=>this.props.newWeatherWidget()} />
-      	<WidgetList widgets={this.props.widgets} />
+      	<WidgetList className="widgetList" widgets={this.props.widgets} />
         <a id="link" href="https://darksky.net/poweredby/"> Powered by Dark Sky</a>
       </div>
       )

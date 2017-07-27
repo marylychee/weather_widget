@@ -1,9 +1,12 @@
 .dashboard {
   position: relative;
   height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
+}
+
+.widgetList {
+  display: flex;
+  flex-wrap: wrap;  
 }
 
 #link {
