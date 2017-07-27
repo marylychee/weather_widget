@@ -6,7 +6,9 @@ body {
    top: 0;
    left: 0;
    height: 100vh;
-   width: 100vh;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
    background: rgba(36, 36, 158, 0.83); /* For browsers that do not support gradients */
    background: -webkit-linear-gradient(left top, rgba(0, 14, 18, 0.83), rgba(0, 133, 255, 0.95)); /* For Safari 5.1 to 6.0 */
    background: -o-linear-gradient(bottom right, rgba(0, 14, 18, 0.83), rgba(0, 133, 255, 0.95)); /* For Opera 11.1 to 12.0 */

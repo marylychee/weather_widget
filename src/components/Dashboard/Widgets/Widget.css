@@ -2,6 +2,8 @@
   background-color: rgba(15, 30, 112, 0.88);
   border-radius: 20px;
   margin: 10px;
+  display: flex;
+  flex-wrap: wrap
 }
 
 .alignCenter{
