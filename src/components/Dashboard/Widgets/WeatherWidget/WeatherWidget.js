@@ -40,7 +40,7 @@ class WeatherWidget extends Widget {
 
     if (!lat || !lng) return;
 
-    axios.get(`http://ec2-54-161-131-187.compute-1.amazonaws.com/weather?lat=${lat}&lng=${lng}`)
+    axios.get(`https://ec2-54-161-131-187.compute-1.amazonaws.com/weather?lat=${lat}&lng=${lng}`)
       .then(response => {
           this.setState({ weather : response.data })
       })
